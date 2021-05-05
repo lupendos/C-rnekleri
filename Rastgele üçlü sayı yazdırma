@@ -1,0 +1,18 @@
+Console.Write("Kaç satır 3lü sayı yazsın : ");
+            int satirSayisi = Convert.ToInt32(Console.ReadLine());
+            string islem = "";
+            Random r = new Random();//Rastgele sayı üretim kütüphanesi
+            int baslangic = 1;
+            while (baslangic <= satirSayisi) //for(int i = 1 ; i<=satirSayisi;i++)
+            {
+                for(int i = 0; i < 3; i++)
+                {
+                    int rastgeleSayi = r.Next(1, 10);
+                     islem += "-" +  rastgeleSayi.ToString() ;
+                }
+                islem = islem.Substring(1);
+                Console.WriteLine(islem);
+                baslangic++;
+                islem = "";
+
+            }
